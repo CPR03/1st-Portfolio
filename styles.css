@@ -1,0 +1,1299 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Added for sticky footer */
+    font-family: Rubik;
+}
+
+/* Layout for sticky footer */
+.page-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrap {
+    flex: 1 0 auto;
+    padding-bottom: 100px; /* Ensure space for footer */
+}
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(146, 146, 154, 1) 0%, rgba(0, 212, 255, 0.39936396922050066) 0%, rgba(85, 42, 237, 0.505806546251313) 100%, rgba(94, 23, 235, 0) 100%);
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+}
+
+.footer-content {
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Base styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.responsive-img:hover {
+    transform: scale(1.02);
+}
+
+/* Mobile menu toggle */
+#mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#mobile-menu-toggle span {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+/* Navigation */
+#mainMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#mainMenu li {
+    float: left;
+}
+
+#mainMenu li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+}
+
+ul li {
+    padding-left: 30px;
+    font-family: "Rubik";
+    font-size: 25px;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Top section */
+.top {
+    padding: 33px 0px 53px 0px;
+    margin: 0px 500px 0px 20px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 20px;
+    background: rgb(146, 146, 154);
+    background: linear-gradient(90deg, rgba(146, 146, 154, 1) 0%, rgba(0, 212, 255, 0.39936396922050066) 0%, rgba(85, 42, 237, 0.505806546251313) 100%, rgba(94, 23, 235, 0) 100%);
+}
+
+.name {
+    margin-top: 0px;
+    padding: 0px 0px 0px 40px;
+    margin-bottom: 10px;
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 80px;
+    color: rgb(33, 42, 62);
+}
+
+.photo {
+    float: right;
+    max-width: 830px;
+    width: 100%;
+}
+
+.photo-verified {
+    position: absolute;
+    left: 780px;
+    top: 109px;
+    width: 80px;
+}
+
+.intro {
+    font-family: Arial;
+    padding: 0px 0px 0px 55px;
+    margin: 0px 110px 0px 0px;
+    font-size: 20px;
+    color: rgb(85, 77, 77);
+}
+
+/* About section */
+.body {
+    position: relative;
+    padding: 30px 30px 320px 5px;
+    margin: 10px 85px 0px 800px;
+    border-radius: 15px;
+    background: rgb(146, 146, 154);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 20px;
+    backdrop-filter: blur(4px);
+    background: linear-gradient(90deg, rgba(146, 146, 154, 1) 0%, rgba(0, 212, 255, 0.96) 0%, rgba(85, 42, 237) 100%, rgba(94, 23, 235, 0) 100%);
+}
+
+.aboutimg {
+    position: absolute;
+    float: left;
+    left: 23px;
+    top: 357px;
+}
+
+.aboutimg img {
+    max-width: 750px;
+    width: 100%;
+}
+
+.aboutme {
+    text-align: right;
+    margin: 50px 30px 0px 0px;
+    font-family: Rubik;
+    font-size: 95px;
+    color: rgb(33, 42, 62);
+    text-shadow: 2px 2px rgb(0, 13, 255, 0.5);
+}
+
+.aboutPara {
+    position: absolute;
+    padding: 0px 100px 0px 90px;
+    margin-bottom: 0px;
+    font-family: Arial;
+    text-align: right;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.contact {
+    padding: 0px 50px 0px 90px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Arial;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+#mysocials {
+    vertical-align: middle;
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: Rubik;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Education section */
+.edu-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 40px auto 60px;
+    max-width: 1100px;
+    padding: 35px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(85, 42, 237, 0.2));
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.edu-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, rgba(0, 212, 255, 0.6), rgba(85, 42, 237, 0.6));
+    border-radius: 5px;
+}
+
+.edu-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.eulogo {
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    padding: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    order: 1;
+    margin: 0;
+}
+
+.eulogo:hover {
+    transform: scale(1.08) rotate(5deg);
+    box-shadow: 0 15px 35px rgba(85, 42, 237, 0.2);
+}
+
+.edupara {
+    flex: 1;
+    padding: 10px 20px;
+    order: 2;
+    min-width: 320px;
+    text-align: left;
+}
+
+.edupara h4 {
+    font-size: 32px;
+    margin: 0 0 15px 0;
+    color: #212a3e;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.edupara h4:after {
+    content: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4ff, #552aed);
+    border-radius: 2px;
+}
+
+.edupara p {
+    font-size: 22px;
+    line-height: 2;
+    margin: 0;
+    color: #333;
+}
+
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.achievement-item:hover {
+    transform: translateX(5px);
+}
+
+.achievement-text {
+    font-weight: 500;
+    margin-right: 10px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.medal-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.medal {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.medal:hover {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.more {
+    border-radius: 30px;
+    margin: 80px auto 50px;
+    padding: 50px 30px 70px;
+    text-align: center;
+    max-width: 1400px;
+    background: linear-gradient(90deg, rgba(146, 146, 154, 1) 0%, rgba(0, 212, 255, 0.3) 0%, rgba(85, 42, 237, 0.4) 100%, rgba(94, 23, 235, 0) 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.more h1 {
+    font-size: 70px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.more h3 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.more h3:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4ff, #552aed);
+    border-radius: 2px;
+}
+
+.edu {
+    display: inline;
+    padding: 300px;
+}
+
+/* Skills section */
+.lower-body {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 40px;
+    padding: 60px 0px 60px 0px;
+    margin: 0px 400px 0px 400px;
+    background-color: ffffff25;
+    border-top: 3px solid #ffffff75;
+    border-left: 3px solid #ffffff75;
+    backdrop-filter: blur(4px);
+    z-index: 0;
+}
+
+h3 {
+    font-family: Rubik;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-family: Rubik;
+}
+
+div.certi {
+    display: table;
+    width: 50%;
+    table-layout: fixed;
+    margin-left: 510px;
+}
+
+div.certi span {
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+}
+
+div.certi span img {
+    width: 80%;
+    max-width: 240px;
+}
+
+div.skills {
+    display: table;
+    width: 75%;
+    table-layout: fixed;
+    margin-left: 170px;
+}
+
+div.skills span {
+    display: table-cell;
+    text-align: center;
+}
+
+div.skills span img,
+div.skills2 span img {
+    max-width: 160px;
+}
+
+div.skills span img[src*="star.png"],
+div.skills2 span img[src*="star.png"] {
+    width: 40px;
+}
+
+div.skills2 {
+    display: table;
+    width: 75%;
+    table-layout: fixed;
+    margin-left: 170px;
+    margin-top: 50px;
+}
+
+div.skills2 span {
+    display: table-cell;
+    text-align: center;
+}
+
+/* Decorative elements */
+.twirl {
+    position: absolute;
+    left: 1760px;
+    top: 905px;
+    max-width: 700px;
+}
+
+.books {
+    position: absolute;
+    right: 1750px;
+    max-width: 700px;
+}
+
+.rocket {
+    position: absolute;
+    left: 1600px;
+    top: 2400px;
+    max-width: 400px;
+}
+
+/* Projects section */
+.projects {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    padding: 0 40px;
+}
+
+div.other-projects {
+    display: table;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+div.other-projects span {
+    display: table-cell;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* App showcase styling */
+.app-showcase-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    padding: 20px 0;
+}
+
+div.other-projects-flutter {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: auto;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+div.other-projects-flutter span {
+    vertical-align: top;
+    text-align: center;
+}
+
+/* Thrifty Money App mobile styles */
+div.other-projects-flutter img {
+    max-width: 100%;
+}
+
+/* App specific styles */
+.app-screen {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: #f7f7f7;
+    padding: 16px 12px;
+    transition: transform 0.3s ease;
+    width: 280px;
+    height: 580px;
+    margin: 0 20px;
+    /* Ensure consistent sizing */
+    box-sizing: border-box;
+}
+
+.app-screen:hover {
+    transform: translateY(-10px);
+}
+
+.app-img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+/* Make sure all phone images have the same dimensions */
+img[src*="thriftymoney.png"],
+img[src*="thriftymoney2.png"],
+img[src*="thriftymoney3.png"] {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9/19;
+    max-height: 550px;
+}
+
+.projectShow {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 80px;
+    padding: 0 20px;
+}
+
+.twirl2 {
+    position: absolute;
+    left: 1770px;
+    top: 6450px;
+    max-width: 400px;
+}
+
+.twirl3 {
+    position: absolute;
+    left: 1680px;
+    top: 6660px;
+    overflow: hidden;
+    max-width: 150px;
+}
+
+/* Footer */
+#footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#footer li {
+    padding: 15px 0px 35px 50px;
+    float: left;
+}
+
+#footer li a {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding: 0px 12px;
+    text-decoration: none;
+}
+
+#footer li span {
+    color: rgb(85, 77, 77);
+    font-size: 20px;
+}
+
+.contact-head {
+    font-size: 35px;
+}
+
+.lifoot {
+    position: relative;
+    top: 45px;
+}
+
+/* Tablet styles (769px to 1024px) */
+@media screen and (max-width: 1024px) {
+    .top {
+        margin: 0px 250px 0px 20px;
+    }
+
+    .name {
+        font-size: 60px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+
+    .photo-verified {
+        left: 580px;
+        top: 109px;
+    }
+
+    .aboutimg {
+        position: relative;
+        left: auto;
+        top: auto;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .aboutme {
+        text-align: center;
+        font-size: 70px;
+        margin: 30px 0;
+    }
+
+    .body {
+        margin: 10px 20px;
+        padding: 30px;
+    }
+
+    .aboutPara {
+        position: relative;
+        text-align: center;
+        padding: 0;
+    }
+
+    .eulogo {
+        left: auto;
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .edupara {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .lower-body {
+        margin: 0px 100px;
+    }
+
+    div.certi {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.skills,
+    div.skills2 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .twirl,
+    .books,
+    .rocket,
+    .twirl2,
+    .twirl3 {
+        display: none;
+    }
+
+    #footer li {
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .projects {
+        padding: 0 30px;
+    }
+
+    .responsive-img {
+        max-width: 600px; /* Smaller images on tablet */
+    }
+
+    .app-screen {
+        width: 240px;
+        height: 500px;
+        margin: 0 15px;
+    }
+
+    div.other-projects span {
+        padding: 0 10px;
+    }
+
+    .projectShow {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+    /* More About Me section - tablet */
+    .more {
+        padding: 40px 20px;
+        margin: 60px auto 40px;
+    }
+
+    .more h1 {
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+
+    .edu-container {
+        flex-direction: row;
+        padding: 30px 20px;
+        gap: 25px;
+        margin: 40px 20px;
+    }
+
+    .eulogo {
+        width: 160px;
+        height: 160px;
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .edupara {
+        order: 2;
+        padding: 0;
+        text-align: left;
+    }
+
+    .edupara h4 {
+        font-size: 26px;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .edupara h4:after {
+        display: none;
+    }
+
+    .achievement-item {
+        justify-content: flex-start;
+        margin-bottom: 12px;
+    }
+}
+
+/* Mobile styles (up to 768px) */
+@media screen and (max-width: 768px) {
+    #mobile-menu-toggle {
+        display: flex;
+    }
+
+    #mainMenu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background-color: #fff;
+        transition: right 0.3s ease;
+        z-index: 999;
+        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #mainMenu.active {
+        right: 0;
+    }
+
+    #mainMenu li {
+        float: none;
+        width: 100%;
+    }
+
+    #mainMenu li a {
+        text-align: left;
+        padding: 15px 20px;
+    }
+
+    .top {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .photo {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    .photo-verified {
+        position: relative;
+        left: auto;
+        top: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .name {
+        font-size: 40px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .intro {
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    .aboutme {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .lower-body {
+        margin: 0px 20px;
+        padding: 30px 0;
+    }
+
+    div.skills,
+    div.skills2 {
+        display: block;
+    }
+
+    div.skills span,
+    div.skills2 span {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    div.other-projects,
+    div.other-projects-flutter {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    div.other-projects span,
+    div.other-projects-flutter span {
+        display: block;
+        padding: 0;
+        margin-bottom: 25px;
+    }
+
+    /* Mobile-specific styles for Thrifty Money app */
+    .app-screen {
+        max-width: 280px;
+        margin: 0 auto 20px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .app-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    img[src*="thriftymoney.png"],
+    img[src*="thriftymoney2.png"] {
+        max-width: 100%;
+    }
+
+    img[src*="thriftymoney3.png"] {
+        max-height: none;
+        max-width: 100%;
+        width: auto;
+    }
+
+    /* Create a proper mobile app display */
+    .app-showcase-container {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    div.other-projects-flutter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Footer mobile styling */
+    .footer {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .footer-content {
+        padding: 10px 0;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer li {
+        float: none;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .lifoot {
+        top: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-head {
+        font-size: 25px;
+    }
+
+    .projects {
+        padding: 0 15px;
+        margin-top: 60px;
+    }
+
+    .responsive-img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    div.other-projects {
+        display: block;
+    }
+
+    .projectShow {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .projects h3 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    /* More About Me section - mobile */
+    .more {
+        padding: 30px 15px;
+        margin: 40px auto 30px;
+        border-radius: 20px;
+    }
+
+    .more h1 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    .more h3 {
+        font-size: 28px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .more h3:after {
+        width: 60px;
+    }
+
+    .edu-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 15px;
+        margin: 30px 15px;
+        gap: 20px;
+    }
+
+    .eulogo {
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .edupara {
+        text-align: center;
+        width: 100%;
+    }
+
+    .edupara h4 {
+        font-size: 24px;
+        padding-bottom: 0;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .edupara h4:after {
+        display: none;
+    }
+
+    .achievement-item {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .achievement-text {
+        font-size: 18px;
+        font-family: Rubik;
+    }
+
+    .medal {
+        width: 25px;
+        height: 25px;
+    }
+
+    .lower-body,
+    .lower-body1 {
+        padding: 25px 10px;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+
+    div.certi {
+        gap: 20px;
+    }
+
+    div.certi span img {
+        max-width: 120px;
+    }
+
+    div.skills span,
+    div.skills2 span {
+        width: 130px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    div.skills span img,
+    div.skills2 span img {
+        max-width: 70px;
+        height: 70px;
+        margin-bottom: 8px;
+    }
+
+    div.skills span img[src*="star.png"],
+    div.skills2 span img[src*="star.png"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Hide decorative elements on mobile */
+    .twirl,
+    .books,
+    .rocket {
+        display: none;
+    }
+
+    .edupara,
+    .edupara h4,
+    .achievement-text,
+    .achievement-item {
+        text-align: center;
+    }
+
+    .achievements-list {
+        align-items: center;
+    }
+}
+
+/* JavaScript toggler support */
+.active {
+    display: block !important;
+}
+
+/* Special handling for mobile app display */
+@media screen and (max-width: 480px) {
+    .app-screen {
+        background: #f8f8f8;
+        border-radius: 28px;
+        padding: 12px 10px;
+        display: inline-block;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        margin-bottom: 25px;
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto 25px;
+    }
+
+    .app-img {
+        border-radius: 20px;
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        aspect-ratio: 9/19;
+    }
+
+    /* Ensure all three phone images match in size */
+    div.other-projects-flutter span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    div.other-projects-flutter {
+        padding: 10px 5px;
+    }
+
+    .projects {
+        padding: 0 10px;
+    }
+
+    .app-showcase-container {
+        padding: 10px 0;
+    }
+}
+
+/* Project spacing */
+div.other-projects + div.other-projects {
+    margin-top: 40px;
+}
+
+/* Certifications section */
+.lower-body1 {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    border-radius: 30px;
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+div.certi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+div.certi span {
+    flex: 0 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+div.certi span:hover {
+    transform: translateY(-5px);
+}
+
+div.certi span img {
+    width: auto;
+    height: auto;
+    max-width: 180px;
+    max-height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Skills section */
+.lower-body {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    border-radius: 30px;
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+div.skills,
+div.skills2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+div.skills span,
+div.skills2 span {
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+div.skills span:hover,
+div.skills2 span:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+div.skills span img,
+div.skills2 span img {
+    max-width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+div.skills span img[src*="star.png"],
+div.skills2 span img[src*="star.png"] {
+    width: 25px;
+    height: 25px;
+    margin: 5px 2px;
+}
+
+/* Decorative elements - make them relative to container and smaller */
+.rocket {
+    position: absolute;
+    max-width: 250px;
+    opacity: 1;
+    z-index: 10;
+}
+
+.twirl {
+    right: -100px;
+    top: 200px;
+}
+
+.books {
+    left: -100px;
+    top: 400px;
+}
+
+.rocket {
+    right: -80px;
+    bottom: 100px;
+}
